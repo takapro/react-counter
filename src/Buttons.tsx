@@ -1,10 +1,13 @@
 import { h } from 'preact';
+import useStoreon from 'storeon/preact';
+import { State } from './store';
 
-const Buttons = (props: { addCount: (x: number) => void }): h.JSX.Element => {
+const Buttons = (): h.JSX.Element => {
+  const { dispatch } = useStoreon<State>('count');
   return (
     <div className='buttons'>
-      <button onClick={() => { props.addCount(-1); return false; }}>-</button>
-      <button onClick={() => { props.addCount(+1); return false; }}>+</button>
+      <button onClick={() => { dispatch('decrement'); return false; }}>-</button>
+      <button onClick={() => { dispatch('increment'); return false; }}>+</button>
     </div>
   );
 };

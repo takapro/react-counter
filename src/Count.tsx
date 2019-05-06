@@ -1,8 +1,11 @@
 import { h } from 'preact';
+import useStoreon from 'storeon/preact';
+import { State } from './store';
 
-const Count = (props: { count: number }): h.JSX.Element => {
+const Count = (): h.JSX.Element => {
+  const { count } = useStoreon<State>('count');
   return (
-    <div className='count'>{props.count}</div>
+    <div className='count'>{count}</div>
   );
 };
 
