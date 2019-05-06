@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { h, render } from "preact"; /** @jsx h */
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+render(<App />, document.getElementById('root')!);

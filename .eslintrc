@@ -6,7 +6,7 @@
   ],
   "settings": {
     "react": {
-      "version": "detect"
+      "version": "latest"
     }
   },
   "rules": {
@@ -20,6 +20,7 @@
         "singleline": { "delimiter": "comma", "requireLast": false }
       }
     ],
+    "react/react-in-jsx-scope": "off",
     "semi": "error",
     "eqeqeq": "error",
     "no-console": "warn"

@@ -1,6 +1,6 @@
-import React from 'react';
+import { h } from 'preact';
 
-const Buttons = (props: { addCount: (x: number) => void }): JSX.Element => {
+const Buttons = (props: { addCount: (x: number) => void }): h.JSX.Element => {
   return (
     <div className='buttons'>
       <button onClick={() => { props.addCount(-1); return false; }}>-</button>

@@ -1,6 +1,6 @@
-import React from 'react';
+import { h } from 'preact';
 
-const Count = (props: { count: number }): JSX.Element => {
+const Count = (props: { count: number }): h.JSX.Element => {
   return (
     <div className='count'>{props.count}</div>
   );
