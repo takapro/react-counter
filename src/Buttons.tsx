@@ -1,10 +1,12 @@
 import React from 'react';
+import { useGlobal } from 'reactn';
 
-const Buttons = (props: { addCount: (x: number) => void }): JSX.Element => {
+const Buttons = (): JSX.Element => {
+  const [count, setCount] = useGlobal<number>('count');
   return (
     <div className='buttons'>
-      <button onClick={() => { props.addCount(-1); return false; }}>-</button>
-      <button onClick={() => { props.addCount(+1); return false; }}>+</button>
+      <button onClick={() => { setCount(count - 1); return false; }}>-</button>
+      <button onClick={() => { setCount(count + 1); return false; }}>+</button>
     </div>
   );
 };

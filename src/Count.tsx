@@ -1,8 +1,10 @@
 import React from 'react';
+import { useGlobal } from 'reactn';
 
-const Count = (props: { count: number }): JSX.Element => {
+const Count = (): JSX.Element => {
+  const [count] = useGlobal<number>('count');
   return (
-    <div className='count'>{props.count}</div>
+    <div className='count'>{count}</div>
   );
 };
 
