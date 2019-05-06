@@ -1,10 +1,13 @@
 import React from 'react';
+import { useDispatch } from './react-redux';
+import { decrementAction, incrementAction } from './store';
 
-const Buttons = (props: { addCount: (x: number) => void }): JSX.Element => {
+const Buttons = (): JSX.Element => {
+  const dispatch = useDispatch();
   return (
     <div className='buttons'>
-      <button onClick={() => { props.addCount(-1); return false; }}>-</button>
-      <button onClick={() => { props.addCount(+1); return false; }}>+</button>
+      <button onClick={() => { dispatch(decrementAction()); return false; }}>-</button>
+      <button onClick={() => { dispatch(incrementAction()); return false; }}>+</button>
     </div>
   );
 };

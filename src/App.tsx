@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './store';
 import Count from './Count';
 import Buttons from './Buttons';
 
 const App = (): JSX.Element => {
-  const [count, setCount] = useState(0);
   return (
-    <>
+    <Provider store={store}>
       <h1>Hello React</h1>
-      <Count count={count} />
-      <Buttons addCount={x => setCount(count + x)} />
-    </>
+      <Count />
+      <Buttons />
+    </Provider>
   );
 };
 

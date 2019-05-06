@@ -1,8 +1,11 @@
 import React from 'react';
+import { useSelector } from './react-redux';
+import { State } from './store';
 
-const Count = (props: { count: number }): JSX.Element => {
+const Count = (): JSX.Element => {
+  const count = useSelector((state: State) => state.count);
   return (
-    <div className='count'>{props.count}</div>
+    <div className='count'>{count}</div>
   );
 };
 
