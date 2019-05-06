@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
+import Count from './Count';
+import Buttons from './Buttons';
 
 const App = (): JSX.Element => {
   const [count, setCount] = useState(0);
   return (
     <>
       <h1>Hello React</h1>
-      <div className='count'>{count}</div>
-      <div className='buttons'>
-        <button onClick={() => { setCount(count - 1); return false; }}>-</button>
-        <button onClick={() => { setCount(count + 1); return false; }}>+</button>
-      </div>
+      <Count count={count} />
+      <Buttons addCount={x => setCount(count + x)} />
     </>
   );
 };
