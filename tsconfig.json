@@ -7,7 +7,6 @@
     "esModuleInterop": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "lib": ["dom", "esnext"],
-    "types": ["jest"]
+    "lib": ["dom", "esnext"]
   }
 }
