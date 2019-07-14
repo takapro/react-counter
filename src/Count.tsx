@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from './react-redux';
+import { useSelector } from 'react-redux';
 import { State } from './store';
 
 const Count = (): JSX.Element => {
