@@ -1,10 +1,10 @@
-import { h } from 'preact';
+import { h, FunctionComponent as FC } from 'preact'; /** @jsx h */
 
-const Buttons = (props: { addCount: (x: number) => void }): h.JSX.Element => {
+const Buttons: FC<{ addCount: (x: number) => void }> = ({ addCount }) => {
   return (
     <div className='buttons'>
-      <button onClick={() => { props.addCount(-1); return false; }}>-</button>
-      <button onClick={() => { props.addCount(+1); return false; }}>+</button>
+      <button onClick={() => { addCount(-1); return false; }}>-</button>
+      <button onClick={() => { addCount(+1); return false; }}>+</button>
     </div>
   );
 };

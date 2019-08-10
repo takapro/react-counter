@@ -1,10 +1,11 @@
-import { h } from 'preact';
+import { h, FunctionComponent as FC } from 'preact'; /** @jsx h */
 import { useState } from 'preact/hooks';
 import Count from './Count';
 import Buttons from './Buttons';
 
-const App = (): h.JSX.Element => {
+const App: FC = () => {
   const [count, setCount] = useState(0);
+
   return (
     <div>
       <h1>Hello React</h1>

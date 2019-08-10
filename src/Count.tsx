@@ -1,8 +1,8 @@
-import { h } from 'preact';
+import { h, FunctionComponent as FC } from 'preact'; /** @jsx h */
 
-const Count = (props: { count: number }): h.JSX.Element => {
+const Count: FC<{ count: number }> = ({ count }) => {
   return (
-    <div className='count'>{props.count}</div>
+    <div className='count'>{count}</div>
   );
 };
 
