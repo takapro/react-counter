@@ -1,10 +1,10 @@
-import { h } from 'preact';
+import { h, FunctionComponent as FC } from 'preact'; /** @jsx h */
 import { Provider } from 'storeon/preact/context';
 import { store } from './store';
 import Count from './Count';
 import Buttons from './Buttons';
 
-const App = (): h.JSX.Element => {
+const App: FC = () => {
   return (
     <Provider value={store}>
       <h1>Hello React</h1>
