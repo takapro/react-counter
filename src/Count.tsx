@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Count = (props: { count: number }): JSX.Element => {
+const Count: React.FC<{ count: number }> = ({ count }) => {
   return (
-    <div className='count'>{props.count}</div>
+    <div className='count'>{count}</div>
   );
 };
 

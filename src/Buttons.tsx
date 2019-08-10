@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Buttons = (props: { addCount: (x: number) => void }): JSX.Element => {
+const Buttons: React.FC<{ addCount: (x: number) => void }> = ({ addCount }) => {
   return (
     <div className='buttons'>
-      <button onClick={() => { props.addCount(-1); return false; }}>-</button>
-      <button onClick={() => { props.addCount(+1); return false; }}>+</button>
+      <button onClick={() => { addCount(-1); return false; }}>-</button>
+      <button onClick={() => { addCount(+1); return false; }}>+</button>
     </div>
   );
 };
