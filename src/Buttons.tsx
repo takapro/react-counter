@@ -2,8 +2,9 @@ import React from 'react';
 import useStoreon from 'storeon/react';
 import { State } from './store';
 
-const Buttons = (): JSX.Element => {
+const Buttons: React.FC = () => {
   const { dispatch } = useStoreon<State>('count');
+
   return (
     <div className='buttons'>
       <button onClick={() => { dispatch('decrement'); return false; }}>-</button>
