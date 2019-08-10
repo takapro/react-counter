@@ -4,7 +4,7 @@ import { store } from './store';
 import Count from './Count';
 import Buttons from './Buttons';
 
-const App = (): JSX.Element => {
+const App: React.FC = () => {
   return (
     <Provider store={store}>
       <h1>Hello React</h1>
