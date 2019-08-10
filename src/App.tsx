@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Count from './Count';
 import Buttons from './Buttons';
+import { CounterProvider } from './Context';
 
 const App = (): JSX.Element => {
-  const [count, setCount] = useState(0);
   return (
-    <>
+    <CounterProvider>
       <h1>Hello React</h1>
-      <Count count={count} />
-      <Buttons addCount={x => setCount(count + x)} />
-    </>
+      <Count />
+      <Buttons />
+    </CounterProvider>
   );
 };
 

@@ -1,8 +1,11 @@
 import React from 'react';
+import { useCounterState } from './Context';
 
-const Count = (props: { count: number }): JSX.Element => {
+const Count: React.FC = () => {
+  const state = useCounterState();
+
   return (
-    <div className='count'>{props.count}</div>
+    <div className='count'>{state.count}</div>
   );
 };
 
