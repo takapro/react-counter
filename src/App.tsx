@@ -3,7 +3,7 @@ import Count from './Count';
 import Buttons from './Buttons';
 import { CounterProvider } from './Context';
 
-const App = (): JSX.Element => {
+const App: React.FC = () => {
   return (
     <CounterProvider>
       <h1>Hello React</h1>

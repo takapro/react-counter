@@ -2,10 +2,10 @@ import React from 'react';
 import { useCounterState } from './Context';
 
 const Count: React.FC = () => {
-  const state = useCounterState();
+  const { count } = useCounterState();
 
   return (
-    <div className='count'>{state.count}</div>
+    <div className='count'>{count}</div>
   );
 };
 

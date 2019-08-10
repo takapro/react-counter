@@ -21,7 +21,7 @@ const initialState = {
 
 // reducer
 
-const reducer = (state: State, action: Action): State => {
+const reducer: React.Reducer<State, Action> = (state, action) => {
   switch (action.type) {
     case DECREMENT:
       return { ...state, count: state.count - action.decr };
@@ -51,10 +51,10 @@ export const CounterProvider: React.FC = ({ children }) => {
   );
 };
 
-export const useCounterState = () => {
+export const useCounterState = (): State => {
   return useContext(StateContext);
 };
 
-export const useCounterDispatch = () => {
+export const useCounterDispatch = (): (action: Action) => void => {
   return useContext(DispatchContext);
 };
