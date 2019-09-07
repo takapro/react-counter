@@ -2,8 +2,8 @@ import React, { createContext, useContext, useReducer } from 'react';
 
 // action
 
-export const DECREMENT: 'DECREMENT' = 'DECREMENT';
-export const INCREMENT: 'INCREMENT' = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const INCREMENT = 'INCREMENT';
 
 type Action =
   { type: typeof DECREMENT, decr: number } |
