@@ -1,5 +1,5 @@
 import { h, FunctionComponent as FC } from 'preact'; /** @jsx h */
-import useStoreon from 'storeon/preact';
+import { useStoreon } from 'storeon/preact';
 import { State } from './store';
 
 const Count: FC = () => {
