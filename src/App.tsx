@@ -1,16 +1,16 @@
 import React from 'react';
-import { Provider } from 'storeon/react/context';
+import { StoreContext } from 'storeon/react';
 import { store } from './store';
 import Count from './Count';
 import Buttons from './Buttons';
 
 const App: React.FC = () => {
   return (
-    <Provider value={store}>
+    <StoreContext.Provider value={store}>
       <h1>Hello React</h1>
       <Count />
       <Buttons />
-    </Provider>
+    </StoreContext.Provider>
   );
 };
 

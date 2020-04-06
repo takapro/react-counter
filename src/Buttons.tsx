@@ -1,5 +1,5 @@
 import React from 'react';
-import useStoreon from 'storeon/react';
+import { useStoreon } from 'storeon/react';
 import { State } from './store';
 
 const Buttons: React.FC = () => {
