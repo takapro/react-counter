@@ -37,6 +37,7 @@ const reducer: React.Reducer<State, Action> = (state, action) => {
 // context
 
 const StateContext = createContext(initialState);
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 const DispatchContext = createContext((action: Action) => {});
 
 export const CounterProvider: React.FC = ({ children }) => {
