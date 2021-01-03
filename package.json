@@ -12,6 +12,7 @@
     "test": "ts-node -O '{\"module\":\"commonjs\"}' node_modules/tape/bin/tape src/**/*.test.ts"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-redux": "^7.1.15",
